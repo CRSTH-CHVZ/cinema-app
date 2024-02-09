@@ -1,5 +1,5 @@
 import axios from "axios";
-import {useSearchStore} from "../store/store";
+import {useMovieResults, useSearchStore} from "../store/store";
 
 const API_KEY = "720906cd";
 const API_BASE_URL = 'http://www.omdbapi.com';
@@ -19,9 +19,8 @@ export const searchMovies = async (title: string, year: string) => {
                 y: year
             }
         });
-
-        if(response.data && response.data.results){
-            return response.data.results;
+        if(response.data.Response){
+            useMovieResults.setState({movies: response.data.Search});
         } else {
             console.log("Couldn't get the data");
         }

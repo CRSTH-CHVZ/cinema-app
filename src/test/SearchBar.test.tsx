@@ -7,7 +7,7 @@ import SearchBar from "../components/SearchBar";
 test("Renders SearchBar component correctly", async () => {
     const { getByText } = render(<SearchBar/>);
 
-    const htmlElement = getByText('SearchBar');
+    const htmlElement = getByText('Completa con los siguientes datos para buscar tu peli favorita');
 
     expect(htmlElement).not.toBeFalsy()
 });

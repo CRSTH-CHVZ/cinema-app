@@ -6,7 +6,7 @@ import Index   from "../components/Index";
 test("Renders Index component correctly", async () => {
     const { getByText } = render(<Index/>);
 
-    const htmlElement = getByText('cinema app')
+    const htmlElement = getByText('Cinema App')
 
     expect(htmlElement).not.toBeFalsy()
 });
